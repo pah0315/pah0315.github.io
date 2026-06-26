@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter Harrison — Support Operations Systems Builder</title>
+<meta name="description" content="11 years building the operational systems that make technical support scale. AI-native workflows, multi-agent orchestration, and internal tooling.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --text-tertiary: #888;
+    --border: #e5e5e5;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --code-bg: #f4f4f5;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --text: #e5e5e5;
+      --text-secondary: #a1a1a1;
+      --text-tertiary: #666;
+      --border: #262626;
+      --accent: #60a5fa;
+      --accent-light: #1e293b;
+      --code-bg: #1c1c1e;
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    padding: 80px 0 48px;
+  }
+
+  header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  header .subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  header .links {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  header .links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  header .links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Sections */
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  section h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-tertiary);
+    margin-bottom: 24px;
+    font-family: var(--mono);
+  }
+
+  section p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+
+  section p strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Systems grid */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .system-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .system-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .system-card .tag {
+    font-size: 12px;
+    font-family: var(--mono);
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .system-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  .system-card .metric {
+    font-size: 13px;
+    font-family: var(--mono);
+    color: var(--text-tertiary);
+    margin-top: 12px;
+  }
+
+  /* Principles */
+  .principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .principles {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .principle {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .principle h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .principle p {
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Skills */
+  .skills-row {
+    margin-bottom: 16px;
+  }
+
+  .skills-row .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .skills-row .values {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 80px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Peter Harrison</h1>
+    <div class="subtitle">I build the operational systems that make support scale.</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/peter-harrison-z90">LinkedIn</a>
+      <a href="https://github.com/pah0315">GitHub</a>
+      <a href="mailto:pah0315@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About</h2>
+    <p>
+      11 years in technical support and developer operations. The last four at Zapier, where I went from working the queue to building the AI systems that make the queue work better.
+    </p>
+    <p>
+      The pattern across every role is the same: <strong>I solve the same class of problem repeatedly, get frustrated by the repetition, and build something that makes the repetition disappear.</strong> Then I package it so others can adopt it without me in the room.
+    </p>
+    <p>
+      I'm more technical than a traditional ops lead, more hands-on than a TPM, and I live in the systems, not above them. I build in Cursor daily. Every system below was built there.
+    </p>
+  </section>
+
+  <!-- KEY SYSTEMS -->
+  <section>
+    <h2>Key Systems</h2>
+    <div class="systems-grid">
+
+      <div class="system-card">
+        <h3>Ticket Routing & Investigation System</h3>
+        <span class="tag">multi-agent orchestration</span>
+        <p>
+          Auto-classifies incoming tickets by complexity across three tiers. Runs parallel evidence gathering across 6+ integrations (ticketing platform, knowledge base, issue tracker, config tools, analytics). Manages state across sessions. Routes based on confidence: high-confidence cases proceed automatically, medium-confidence pause for review, low-confidence flag for human judgment. Quality validation layer catches problems in AI-generated replies before they reach customers.
+        </p>
+        <div class="metric">~20% productivity improvement · 500+ tickets processed · self-install in 15 min</div>
+      </div>
+
+      <div class="system-card">
+        <h3>Quality Validation Pipeline</h3>
+        <span class="tag">evaluation framework</span>
+        <p>
+          4-layer validation for AI-generated customer communications. Universal guardrails (hard constraints that never bend), org-standard behavioral checks, personal voice customization, and orchestration wiring that sequences the layers and resolves conflicts between them. Each layer has defined scope and can't override the layer above it.
+        </p>
+        <div class="metric">~60% of drafts flagged and corrected before send</div>
+      </div>
+
+      <div class="system-card">
+        <h3>42-Skill Internal Tooling Library</h3>
+        <span class="tag">internal tooling · developer experience</span>
+        <p>
+          AI skills across 9 domains: investigation, reply drafting, escalation handling, security review, coaching, meeting prep, enablement, data queries, and meta-tooling. Each skill has defined scope, allowed tools, decision trees, and security constraints. Self-install design with quickstart guides. Three people onboarded in the first week without my involvement.
+        </p>
+        <div class="metric">42+ skills · 9 domains · self-service adoption</div>
+      </div>
+
+      <div class="system-card">
+        <h3>Workspace Orchestrator</h3>
+        <span class="tag">routing · operational health</span>
+        <p>
+          Always-on routing layer that loads into every session. Routes tasks to the right skill across 42 tools. Detects repeated manual patterns and nudges systemization. Flags scope creep. Watches for energy signals and offers check-ins. Hybrid architecture: lightweight always-on rule for routing plus a deep mode for workspace health checks and optimization passes.
+        </p>
+        <div class="metric">42 skills across 9 domains · pattern detection · proactive nudges</div>
+      </div>
+
+      <div class="system-card">
+        <h3>AI Training Program</h3>
+        <span class="tag">program ownership · end-to-end</span>
+        <p>
+          Hand-picked by VP of Support to lead the team that built an org-wide AI training curriculum. Full program ownership: curriculum design, team coordination, delivery, and metrics. Built a personalized system that adapts to each user's tool environment (15-minute setup, runs autonomously after). Designed the measurement framework for tracking adoption.
+        </p>
+        <div class="metric">28-day build · 100+ users · adopted by teams outside support</div>
+      </div>
+
+      <div class="system-card">
+        <h3>Impact Intelligence Dashboard</h3>
+        <span class="tag">full-stack · shipped product</span>
+        <p>
+          Next.js app with PostgreSQL backend, AI integration for coaching analysis, automated prep generation from analytics data, audit log viewer, and goals correlation. Deployed on Vercel. Survived a data integrity incident (229 records silently overwritten during sync), diagnosed the root cause, and hardened the pipeline. Later migrated to the company's internal AI platform.
+        </p>
+        <div class="metric">full-stack · production · platform migration</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DESIGN PRINCIPLES -->
+  <section>
+    <h2>Design Principles</h2>
+    <p>Every system I build follows the same architecture:</p>
+    <div class="principles">
+      <div class="principle">
+        <h4>Works immediately</h4>
+        <p>Something useful happens before you understand the internals.</p>
+      </div>
+      <div class="principle">
+        <h4>Transparent</h4>
+        <p>You can see what it's doing and why. No black boxes.</p>
+      </div>
+      <div class="principle">
+        <h4>You own the output</h4>
+        <p>Files you control. Artifacts you can edit. Nothing locked behind my access.</p>
+      </div>
+      <div class="principle">
+        <h4>Progressive depth</h4>
+        <p>Use it simply. Go deeper when you're ready. Complexity is available, not imposed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section>
+    <h2>How I Work</h2>
+    <p>
+      <strong>The throughline:</strong> do the work, notice the pattern, encode the pattern, package it for adoption, teach the methodology. Learn. Build. Teach. Repeat.
+    </p>
+    <p>
+      I don't build tools from the outside looking in. I work the queue daily, hit the same problems repeatedly, and turn those problems into systems. The investigation methodology I use 15+ times a day is the same methodology encoded into the AI skills. That's why the automation works: it's grounded in real operational experience.
+    </p>
+    <p>
+      <strong>On AI:</strong> I use Cursor as my primary development environment. Every system on this page was built there. I treat AI as a force multiplier with verification requirements, not a replacement for judgment. The prompts matter less than the habits around them.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Technical</h2>
+    <div class="skills-row">
+      <div class="label">Operations & Systems</div>
+      <div class="values">Queue management, routing logic, ticket classification, escalation design, SLA tracking, taxonomy design, systems health monitoring, backlog management, stakeholder communication</div>
+    </div>
+    <div class="skills-row">
+      <div class="label">AI & Tooling</div>
+      <div class="values">Cursor (daily power user), AI-native workflows, multi-agent orchestration, prompt engineering, MCP integrations, LLM evaluation, confidence routing</div>
+    </div>
+    <div class="skills-row">
+      <div class="label">Languages & Infrastructure</div>
+      <div class="values">TypeScript, JavaScript, Python, SQL, React, Next.js, PostgreSQL, Git, Vercel, Zendesk, Databricks</div>
+    </div>
+    <div class="skills-row">
+      <div class="label">Program & Enablement</div>
+      <div class="values">End-to-end program ownership, curriculum design, cross-functional coordination, documentation strategy, adoption design, self-install tooling, metrics definition</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <a href="https://www.linkedin.com/in/peter-harrison-z90">LinkedIn</a> · 
+      <a href="https://github.com/pah0315">GitHub</a> · 
+      <a href="mailto:pah0315@gmail.com">pah0315@gmail.com</a> · 
+      Round Rock, TX
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
