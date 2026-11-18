@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes EA Privacy Policy — Peter Harrison</title>
+<meta name="description" content="Privacy policy for Hermes EA, a personal assistant text service.">
+<meta name="robots" content="index,follow">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --text-tertiary: #888;
+    --border: #e5e5e5;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --code-bg: #f4f4f5;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --text: #e5e5e5;
+      --text-secondary: #a1a1a1;
+      --text-tertiary: #666;
+      --border: #262626;
+      --accent: #60a5fa;
+      --accent-light: #1e293b;
+      --code-bg: #1c1c1e;
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    padding: 80px 0 48px;
+  }
+
+  header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  header .subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  header .links {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  header .links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  header .links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Sections */
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  section h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-tertiary);
+    margin-bottom: 24px;
+    font-family: var(--mono);
+  }
+
+  section p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+
+  section p strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Systems grid */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .system-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .system-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .system-card .tag {
+    font-size: 12px;
+    font-family: var(--mono);
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .system-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  .system-card .metric {
+    font-size: 13px;
+    font-family: var(--mono);
+    color: var(--text-tertiary);
+    margin-top: 12px;
+  }
+
+  /* Principles */
+  .principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .principles {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .principle {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .principle h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .principle p {
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Skills */
+  .skills-row {
+    margin-bottom: 16px;
+  }
+
+  .skills-row .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .skills-row .values {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 80px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+</style>
+<style>
+  .doc h2 { margin-bottom: 12px; }
+  .doc ul, .doc ol { margin: 0 0 16px 22px; color: var(--text-secondary); font-size: 16px; line-height: 1.7; }
+  .doc li { margin-bottom: 6px; }
+  .doc .updated { font-family: var(--mono); font-size: 13px; color: var(--text-tertiary); margin-bottom: 8px; }
+  .doc code { font-family: var(--mono); background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  .nav-back { font-size: 14px; margin-top: 8px; }
+  .nav-back a { color: var(--accent); text-decoration: none; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Hermes EA Privacy Policy</h1>
+    <div class="subtitle">Personal assistant text service. One user.</div>
+    <div class="links">
+      <a href="./">Peter Harrison</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:pah0315@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section class="doc">
+    <div class="updated">Last updated: November 18, 2026</div>
+    <h2>Who this is for</h2>
+    <p>Hermes EA is a personal assistant service run by Peter Harrison for his own use. It is not offered to the public. The only user is Peter Harrison.</p>
+  </section>
+
+  <section class="doc">
+    <h2>What is collected</h2>
+    <ul>
+      <li>The user's mobile phone number.</li>
+      <li>The text messages sent to and from the service.</li>
+      <li>Calendar entries and reminders that the user connects to the service.</li>
+    </ul>
+  </section>
+
+  <section class="doc">
+    <h2>How it is used</h2>
+    <p>Only to send the user reminders and schedule updates, to receive and understand the user's replies, and to send replies. Nothing is used for advertising or marketing.</p>
+  </section>
+
+  <section class="doc">
+    <h2>Service providers</h2>
+    <p>Text messages are delivered through Twilio. The text of messages and calendar details are processed by the AI model provider that the assistant uses to write and read messages. Message content is generated by an AI assistant. These providers handle data only to run the service.</p>
+  </section>
+
+  <section class="doc">
+    <h2>No sharing for marketing</h2>
+    <p>Mobile information, including phone numbers and text messaging opt-in consent, is not shared with or sold to third parties or affiliates for marketing or promotional purposes.</p>
+  </section>
+
+  <section class="doc">
+    <h2>Retention</h2>
+    <p>Conversation history on the service, including text messages, is kept for 90 days and then deleted. Twilio, which delivers the messages, keeps its own delivery records under its own retention policy. Calendar data is read when needed and is not published.</p>
+  </section>
+
+  <section class="doc">
+    <h2>Your choices</h2>
+    <ul>
+      <li>Reply <code>STOP</code> to stop all messages.</li>
+      <li>Reply <code>HELP</code> for help.</li>
+      <li>To ask for deletion of stored messages, email <a href="mailto:pah0315@gmail.com">pah0315@gmail.com</a>.</li>
+    </ul>
+  </section>
+
+  <section class="doc">
+    <h2>Contact</h2>
+    <p>Peter Harrison, <a href="mailto:pah0315@gmail.com">pah0315@gmail.com</a>, Round Rock, TX.</p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="./">Peter Harrison</a> ·
+      <a href="privacy.html">Hermes EA Privacy Policy</a> ·
+      <a href="terms.html">Hermes EA Terms</a> ·
+      <a href="mailto:pah0315@gmail.com">pah0315@gmail.com</a>
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
